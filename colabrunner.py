@@ -14,17 +14,15 @@ if __name__ == "__main__":
         sb.open(url)
 
 
-        sb.click('a[data-action="sign in"]')
-        sb.type('input[type="email"]', USER)
+        sb.type('input[type="email"]', USER+'\n')
         sb.save_screenshot('0000.png')
 
-        sb.click('button:contains("Next")')
         sb.sleep(5)
         sb.save_screenshot('0001.png')
 
 
-        sb.type('input[type="password"]', PASSWORD)
-        sb.click('button:contains("Next")')
+        sb.type('input[type="password"]', PASSWORD+'\n')
+        sb.sleep(5)
         sb.save_screenshot('0003.png')
         
         sb.sleep(60)
@@ -32,4 +30,4 @@ if __name__ == "__main__":
         sb.save_screenshot('0003.png')
         
 
-        sb.sleep(3*60)
+        sb.sleep(15*60)
