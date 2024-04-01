@@ -23,5 +23,7 @@ if __name__ == "__main__":
         while 1:
         # Looping logic
             sb.open(URL) # Url to replit
-            sb.find_element("//button[.//span[contains(text(), 'Run')]]")
+            sb.find_element(
+                "//button[.//span[contains(text(), 'Run')]]",
+                timeout=10800)
             sb.type('body', Keys.CONTROL + Keys.ENTER)
