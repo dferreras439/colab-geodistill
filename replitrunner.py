@@ -29,6 +29,7 @@ if __name__ == "__main__":
             sb.open(URL) # Url to replit
             sb.save_screenshot('0004.png') # Test how sb handles url
 
+            sb.sleep(5)
             sb.find_element("//button[.//span[contains(text(), 'Stop')]]")
             sb.type('body', Keys.CONTROL + Keys.ENTER)
             sb.save_screenshot('0005.png')
