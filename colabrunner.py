@@ -2,7 +2,7 @@ from seleniumbase import SB
 from selenium.webdriver.common.keys import Keys
 import os, time
 
-URL = os.getenv('URL2')
+URL = os.getenv('URL')
 USER = os.getenv('USER')
 PASSWORD = os.getenv('PASSWORD')
 
