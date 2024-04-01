@@ -11,7 +11,7 @@ if __name__ == "__main__":
     with SB(uc=True) as sb: 
         
         sb.open('https://replit.com/login') # Login block
-        sb.click('button[name="Continue with Google"]')
+        sb.click("//button[contains(., 'Continue with Google')]")
         sb.save_screenshot('0000.png')
 
         sb.type('input[type="email"]', USER+'\n')
