@@ -18,11 +18,11 @@ if __name__ == "__main__":
         sb.sleep(5)
 
         sb.type('input[type="password"]', PASSWORD+'\n')
-        sb.sleep(5) # End login block
+        sb.sleep(5) 
+        sb.open(URL) # End login block. # Url to replit
             
         while 1:
         # Looping logic
-            sb.open(URL) # Url to replit
             sb.find_element(
                 "//button[.//span[contains(text(), 'Run')]]",
                 timeout=10800)
