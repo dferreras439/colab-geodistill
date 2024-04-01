@@ -2,8 +2,7 @@ from seleniumbase import SB
 from selenium.webdriver.common.keys import Keys
 import os, time
 
-url = 'https://colab.research.google.com/drive/1Ga2z2yIvOgJYy5auON27yfNaNqGny_Pg'
-
+URL = os.getenv('URL2')
 USER = os.getenv('USER')
 PASSWORD = os.getenv('PASSWORD')
 
@@ -16,14 +15,14 @@ if __name__ == "__main__":
         with SB(uc=True) as sb: 
             
             sb.open(url)
-
-
-            sb.type('input[type="email"]', USER+'\n')
+            sb.click('button[name="Continue with Google"]')
             sb.save_screenshot('0000.png')
 
-            sb.sleep(5)
+            sb.type('input[type="email"]', USER+'\n')
             sb.save_screenshot('0001.png')
 
+            sb.sleep(5)
+            sb.save_screenshot('0002.png')
 
             sb.type('input[type="password"]', PASSWORD+'\n')
             sb.sleep(5)
@@ -39,7 +38,7 @@ if __name__ == "__main__":
         
         with SB(uc=True) as sb: 
 
-            sb.open(url)
+            sb.open(URL)
             sb.load_cookies('cookies')
             sb.refresh()
             sb.sleep(5)
