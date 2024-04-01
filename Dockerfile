@@ -17,4 +17,4 @@ RUN apt-get update && apt-get install -y wget \
     google-chrome-stable_current_amd64.deb
 
 # Run the Python script when the container launches
-CMD ["python", "replitrunner.py"]
+CMD ["python", "colabrunner.py"]
